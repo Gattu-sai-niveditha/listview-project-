@@ -1,0 +1,17 @@
+<mvc:View
+    controllerName="ui.ListViewProject.listviewproject.controller.NextView"
+    xmlns:mvc="sap.ui.core.mvc"
+    displayBlock="true"
+    xmlns="sap.m">
+    <App>
+        <Page>
+            <Label text="Banglore" />
+                <footer>
+                        <Toolbar>
+                            <ToolbarSpacer/>
+                            <Button type="Emphasized" text="Back" press="onPressBack"/>
+                        </Toolbar>
+                 </footer>
+        </Page>
+    </App>
+</mvc:View>

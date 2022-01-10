@@ -1,0 +1,40 @@
+<mvc:View
+    controllerName="ui.ListViewProject.listviewproject.controller.ListItemsView"
+    xmlns:mvc="sap.ui.core.mvc"
+    displayBlock="true"
+    xmlns="sap.m">
+    
+        <App id="app">
+            <pages>
+               <List id="list" 
+               items= "{
+                   path : 'newProduct>/ProductCollection',
+                   sorter :{
+                       path: 'SupplierName',
+				       descending: false,
+				       group: true
+                   }
+
+               }">
+               <headerToolbar>
+                    <OverflowToolbar id="ftb">
+                        <Title id="title1" class="css" text="Products"/>
+                            <ToolbarSpacer id="toolbar1" />
+                            <SearchField id="search" liveChange=".onSearch" width="20%" />
+                    </OverflowToolbar>
+               </headerToolbar>
+            <StandardListItem id="st1" title="{newProduct>Name}" 
+            description= "{newProduct>ProductId}"  />
+               </List> 
+               <footer>
+               <Toolbar id="_IDGenToolbar1">
+               <ToolbarSpacer id="_IDGenToolbarSpacer1"/>
+               <Button id="_IDGenButton1" type="Emphasized" text="Date" press="onPressDate" ></Button>
+               <Button id="_IDGenButton2" type="Emphasized" text="Date" press="onPressNext" ></Button>
+               <Button id="_IDGenButton3"  text="Date" press="onPressClear" ></Button>
+               </Toolbar>
+               </footer>
+            </pages>
+        </App>
+    
+</mvc:View>
