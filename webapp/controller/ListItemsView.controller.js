@@ -30,10 +30,14 @@ sap.ui.define([
                 var oBinding = oList.getBinding("items");
                 oBinding.filter(products,"Application");    
             },
+
+
             onPressNext: function(){
                 var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
-                oRouter.navTo("TargetNextView");
+                oRouter.navTo("RouteNextView");
             },
+
+            
             onPressDate: function(){
                 MessageToast.show(moment().format('MMMM Do YYYY, h:mm:ss a'));
             }

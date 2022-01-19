@@ -2,10 +2,13 @@
     controllerName="ui.ListViewProject.listviewproject.controller.ListItemsView"
     xmlns:mvc="sap.ui.core.mvc"
     displayBlock="true"
-    xmlns="sap.m">
+    xmlns="sap.m"
+	xmlns:l="sap.ui.layout"
+	xmlns:f="sap.ui.layout.form"
+	xmlns:core="sap.ui.core">
     
         <App id="app">
-            <pages>
+            <Page id="_IDGenPage1">
                <List id="list" 
                items= "{
                    path : 'newProduct>/ProductCollection',
@@ -18,7 +21,8 @@
                }">
                <headerToolbar>
                     <OverflowToolbar id="ftb">
-                        <Title id="title1" class="css" text="Products"/>
+                        <Title id="title1" class="css sapUiLargeMarginBegin" text="Products"/>
+                          <!-- <Button id="_IDGenButton1" type="Emphasized" text="Date" press="onPressDate" ></Button>  -->
                             <ToolbarSpacer id="toolbar1" />
                             <SearchField id="search" liveChange=".onSearch" width="20%" />
                     </OverflowToolbar>
@@ -29,12 +33,12 @@
                <footer>
                <Toolbar id="_IDGenToolbar1">
                <ToolbarSpacer id="_IDGenToolbarSpacer1"/>
-               <Button id="_IDGenButton1" type="Emphasized" text="Date" press="onPressDate" ></Button>
-               <Button id="_IDGenButton2" type="Emphasized" text="Date" press="onPressNext" ></Button>
-               <Button id="_IDGenButton3"  text="Date" press="onPressClear" ></Button>
+               <!-- <Button id="_IDGenButton1" type="Emphasized" text="Date" press="onPressDate" ></Button> -->
+               <Button id="_IDGenButton2" type="Emphasized" text="Next" press="onPressNext" ></Button>
+               <Button id="_IDGenButton3"  text="Clear" press="onPressClear" ></Button>
                </Toolbar>
                </footer>
-            </pages>
+            </Page>
         </App>
     
 </mvc:View>

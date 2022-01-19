@@ -7,7 +7,7 @@
     "applicationVersion": {
       "version": "0.0.1"
     },
-    "title": "{{appTitle}}",
+    "title": "{{ListItems}}",
     "description": "{{appDescription}}",
     "dataSources": {
       "mainService": {
@@ -73,6 +73,9 @@
       }
     },
     "resources": {
+        "js" :[{
+            "uri" : "lib/moment.min.js"
+        }],
       "css": [
         {
           "uri": "css/style.css"
@@ -91,15 +94,15 @@
       },
       "routes": [
         {
-          "name": "RouteListItemsView",
+          "name": "TargetListItemsView",
           "pattern": "RouteListItemsView",
           "target": [
             "TargetListItemsView"
           ]
         },
         {
-            "name": "RouteLNextView",
-          "pattern": "RouteNextViewController",
+            "name": "TargetNextView",
+          "pattern": "RouteNextView",
           "target": [
             "TargetNextView"
           ]
